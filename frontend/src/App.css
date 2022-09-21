@@ -1,0 +1,154 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  position: relative;
+  /*относительное позиционирование*/
+  width: 100%;
+  /*на всю ширину*/
+  padding: 20px 50px;
+  /*поля для контента*/
+  background: #3586ff;
+  /*цвет футера*/
+  display: flex;
+  justify-content: left;
+  /*слева по горизонтали*/
+}
+
+footer {
+  position: relative;
+  /*относительное позиционирование*/
+  width: 100%;
+  /*на всю ширину*/
+  padding: 20px 50px;
+  /*поля для контента*/
+  background: #3586ff;
+  /*цвет футера*/
+  display: flex;
+  justify-content: center;
+  /*в центре по горизонтали*/
+  align-items: center;
+  /*в центре по вертикали*/
+  flex-direction: column;
+  margin-top: 200px;
+  /*отступ сверху*/
+}
+
+footer .wave {
+  position: absolute;
+  /*абсолютное позиционирование*/
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(wave.png);
+  /*картинка волны*/
+  background-size: 1000px 100px;
+  /*ширина и высота волны*/
+}
+
+.menu,
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+  /*разрешен перенос на новую строку*/
+}
+
+.menu li,
+nav li {
+  list-style: none;
+  /*удалить черные маркеры*/
+}
+
+.menu li a,
+nav li a {
+  font-size: 1.2em;
+  /*размер ссылок меню*/
+  color: #fff;
+  /*цвет ссылок меню*/
+  opacity: 0.75;
+  /*значение прозрачности*/
+  margin: 0 15px;
+  text-decoration: none;
+  /*ссылка без подчеркивания*/
+  display: inline-block;
+}
+
+.menu li a:hover {
+  opacity: 1;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.1em;
+}
+
+table {
+  margin: auto;
+  font-size: 14px;
+  background: white;
+  max-width: 70%;
+  width: 70%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th {
+  font-weight: normal;
+  color: #039;
+  border-bottom: 2px solid #3586ff;
+  padding: 10px 8px;
+}
+
+td {
+  color: #3586ff;
+  padding: 9px 8px;
+  transition: .3s linear;
+}
+
+tr:hover td {
+  color: #6699ff;
+}
