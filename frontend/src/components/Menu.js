@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Menu = () => {
     return (
         <header>
@@ -5,9 +7,11 @@ const Menu = () => {
                 <a href="/" class="logo">LOGO_OF_TODO</a>
                 <nav>
                     <ul class='nav'>
-                        <li><a href="">Users</a></li>
-                        <li><a href="">Projects</a></li>
-                        <li><a href="">Todo</a></li>
+                        <li>
+                            <Link to='/users'>Users</Link>
+                        </li>
+                        <li><Link to='/projects'>Projects</Link></li>
+                        <li><Link to='/todo'>Todo</Link></li>
                     </ul>
                 </nav>
             </div>
