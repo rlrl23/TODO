@@ -152,3 +152,22 @@ td {
 tr:hover td {
   color: #6699ff;
 }
+
+.login {
+  position: relative;
+  /*относительное позиционирование*/
+  width: 100%;
+  /*на всю ширину*/
+  padding: 20px 50px;
+  /*поля для контента*/
+  background: #3586ff;
+  /*цвет футера*/
+  display: flex;
+  justify-content: center;
+  padding-left: 350px;
+  font-size: 1.2em;
+  /*размер ссылок меню*/
+  color: #fff;
+  text-decoration: none;
+  opacity: 1;
+}
