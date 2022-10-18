@@ -6,6 +6,7 @@ from mainapp.serializers import ProjectModelSerializer, TodoModelSerializer
 from rest_framework import filters
 from rest_framework.response import Response
 from .filters import DateCreatedFilter
+from rest_framework.permissions import IsAuthenticated
 
 
 class ProjectPageNumberPagination(PageNumberPagination):
@@ -19,15 +20,16 @@ class TodoPageNumberPagination(PageNumberPagination):
 class ProjectModelViewSet(ModelViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectModelSerializer
-    pagination_class = ProjectPageNumberPagination
+    #pagination_class = ProjectPageNumberPagination
     filter_backends = [filters.SearchFilter]
     search_fields = ['name']
 
 
 class TodoModelViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]
     queryset = Todo.objects.all()
     serializer_class = TodoModelSerializer
-    pagination_class = TodoPageNumberPagination
+    #pagination_class = TodoPageNumberPagination
     filter_backends = [filters.SearchFilter]
     search_fields = ['project__name']
     filterset_class = DateCreatedFilter
