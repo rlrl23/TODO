@@ -171,3 +171,24 @@ tr:hover td {
   text-decoration: none;
   opacity: 1;
 }
+
+.form {
+  position: relative;
+  /*относительное позиционирование*/
+  width: 100%;
+  /*на всю ширину*/
+
+
+}
+
+label {
+  line-height: normal;
+  display: list-item;
+
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #039;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
